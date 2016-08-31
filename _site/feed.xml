@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>超江同学写字的地方</title>
-    <description></description>
+    <description>Python、iOS、Android、测试</description>
     <link>http://chaojiang.me/</link>
     <atom:link href="http://chaojiang.me/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 31 Aug 2016 17:28:42 +0800</pubDate>
-    <lastBuildDate>Wed, 31 Aug 2016 17:28:42 +0800</lastBuildDate>
+    <pubDate>Wed, 31 Aug 2016 17:43:40 +0800</pubDate>
+    <lastBuildDate>Wed, 31 Aug 2016 17:43:40 +0800</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -436,11 +436,7 @@ date: 2014-06-06 20:00:00
         <link>http://chaojiang.me/2015/09/22/js-version/</link>
         <guid isPermaLink="true">http://chaojiang.me/2015/09/22/js-version/</guid>
         
-        <category>前端开发</category>
-        
-        <category>JavaScript</category>
-        
-        <category>翻译</category>
+        <category>技术</category>
         
         
       </item>
