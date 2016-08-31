@@ -11,56 +11,346 @@ tags:
     - 翻译
 ---
 
+# MacDown
 
-JavaScript 有着很奇怪的命名史。
+![MacDown logo](http://macdown.uranusjr.com/static/base/img/logo-160.png)
 
-1995 年，它作为网景浏览器（Netscape Navigator）的一部分首次发布，网景给这个新语言命名为 LiveScript。一年后，为了搭上当时媒体热炒 Java 的顺风车，临时改名为了 JavaScript *（当然，Java 和 JavaScript 的关系，就和雷锋和雷锋塔一样 —— 并没有什么关系）*
+Hello there! I’m **MacDown**, the open source Markdown editor for OS X.
 
-![java-javascript](/img/in-post/post-js-version/javascript-java.jpg)
-<small class="img-hint">歪果仁的笑话怎么一点都不好笑</small>
-
-> 译者注：[wikipedia 的 JavaScript 词条](https://en.wikipedia.org/wiki/JavaScript#History) 更详细的叙述了这段历史
-
-1996 年，网景将 JavaScript 提交给 [ECMA International（欧洲计算机制造商协会）](http://www.ecma-international.org/) 进行标准化，并最终确定出新的语言标准，它就是 ECMAScript。自此，ECMAScript 成为所有 JavaScript 实现的基础，不过，由于 JavaScript 名字的历史原因和市场原因（很显然 ECMAScript 这个名字并不令人喜欢……），现实中我们只用 ECMAScript 称呼标准，平时都还是使用 JavaScript 来称呼这个语言。
+Let me introduce myself.
 
 
-> 术语（译者注）：
+
+## Markdown and I
+
+**Markdown** is a plain text formatting syntax created by John Gruber, aiming to provide a easy-to-read and feasible markup. The original Markdown syntax specification can be found [here](http://daringfireball.net/projects/markdown/syntax).
+
+**MacDown** is created as a simple-to-use editor for Markdown documents. I render your Markdown contents real-time into HTML, and display them in a preview panel.
+
+![MacDown Screenshot](http://d.pr/i/10UGP+)
+
+I support all the original Markdown syntaxes. But I can do so much more! Various popular but non-standard syntaxes can be turned on/off from the [**Markdown** preference pane](#markdown-pane).
+
+You can specify extra HTML rendering options through the [**Rendering** preference pane](#rendering-pane).
+
+You can customize the editor window to you liking in the [**Editor** preferences pane](#editor-pane):
+
+You can configure various application (that's me!) behaviors in the [**General** preference pane](#general-pane).
+
+## The Basics
+Before I tell you about all the extra syntaxes and capabilities I have, I'll introduce you to the basics of standard markdown. If you already know markdown, and want to jump straight to learning about the fancier things I can do, I suggest you skip to the [**Markdown** preference pane](#markdown-pane). Lets jump right in.  
+
+### Line Breaks
+To force a line break, put two spaces and a newline (return) at the end of the line.
+
+	These lines
+	won't break
+
+	These lines  
+	will break
+
+
+### Strong and Emphasize
+
+**Strong**: `**Strong**` or `__Strong__` (Command-B)  
+*Emphasize*: `*Emphasize*` or `_Emphasize_`[^emphasize] (Command-I)
+
+### Headers (like this one!)
+
+	Header 1
+	========
+
+	Header 2
+	--------
+
+or
+
+	# Header 1
+	## Header 2
+	### Header 3
+	#### Header 4
+	##### Header 5
+	###### Header 6
+
+
+
+### Links and Email
+#### Inline
+Just put angle brackets around an email and it becomes clickable: <uranusjr@gmail.com>  
+`<uranusjr@gmail.com>`  
+
+Same thing with urls: <http://macdown.uranusjr.com>  
+` <http://macdown.uranusjr.com>`  
+
+Perhaps you want to some link text like this: [Macdown Website](http://macdown.uranusjr.com "Title")  
+`[Macdown Website](http://macdown.uranusjr.com "Title")` (The title is optional)  
+
+
+#### Reference style
+Sometimes it looks too messy to include big long urls inline, or you want to keep all your urls together.  
+
+Make [a link][arbitrary_id] `[a link][arbitrary_id]` then on it's own line anywhere else in the file:  
+`[arbitrary_id]: http://macdown.uranusjr.com "Title"`
+  
+If the link text itself would make a good id, you can link [like this][] `[like this][]`, then on it's own line anywhere else in the file:  
+`[like this]: http://macdown.uranusjr.com`  
+
+[arbitrary_id]: http://macdown.uranusjr.com "Title"
+[like this]: http://macdown.uranusjr.com  
+
+
+### Images
+#### Inline
+`![Alt Image Text](path/or/url/to.jpg "Optional Title")`
+#### Reference style
+`![Alt Image Text][image-id]`  
+on it's own line elsewhere:  
+`[image-id]: path/or/url/to.jpg "Optional Title"`
+
+
+### Lists
+
+* Lists must be preceded by a blank line (or block element)
+* Unordered lists start each item with a `*`
+- `-` works too
+	* Indent a level to make a nested list
+		1. Ordered lists are supported.
+		2. Start each item (number-period-space) like `1. `
+		42. It doesn't matter what number you use, I will render them sequentially
+		1. So you might want to start each line with `1.` and let me sort it out
+
+Here is the code:
+
+```
+* Lists must be preceded by a blank line (or block element)
+* Unordered lists start each item with a `*`
+- `-` works too
+	* Indent a level to make a nested list
+		1. Ordered lists are supported.
+		2. Start each item (number-period-space) like `1. `
+		42. It doesn't matter what number you use, I will render them sequentially
+		1. So you might want to start each line with `1.` and let me sort it out
+```
+
+
+
+### Block Quote
+
+> Angle brackets `>` are used for block quotes.  
+Technically not every line needs to start with a `>` as long as
+there are no empty lines between paragraphs.  
+> Looks kinda ugly though.
+> > Block quotes can be nested.  
+> > > Multiple Levels
 >
-> * *标准（Standard）*： 用于定义与其他事物区别的一套规则
-> * *实现（Implementation）*： 某个标准的具体实施/真实实践
+> Most markdown syntaxes work inside block quotes.
+>
+> * Lists
+> * [Links][arbitrary_id]
+> * Etc.
+
+Here is the code:
+
+```
+> Angle brackets `>` are used for block quotes.  
+Technically not every line needs to start with a `>` as long as
+there are no empty lines between paragraphs.  
+> Looks kinda ugly though.
+> > Block quotes can be nested.  
+> > > Multiple Levels
+>
+> Most markdown syntaxes work inside block quotes.
+>
+> * Lists
+> * [Links][arbitrary_id]
+> * Etc.
+```
+  
+  
+### Inline Code
+`Inline code` is indicated by surrounding it with backticks:  
+`` `Inline code` ``
+
+If your ``code has `backticks` `` that need to be displayed, you can use double backticks:  
+```` ``Code with `backticks` `` ````  (mind the spaces preceding the final set of backticks)
 
 
-不过，JavaScript 开发者们并不怎么在乎这些，因为在诞生之后的 15 年里，ECMAScript 并没有多少变化，而且现实中的很多实现都已经和标准大相径庭。其实在第一版的 ECMAScript 发布后，很快又跟进发布了两个版本，但是自从 1999 年 ECMAScript 3 发布后，十年内都没有任何改动被成功添加到官方规范里。取而代之的，是各大浏览器厂商们争先进行自己的语言拓展，web 开发者们别无选择只能去尝试并且支持这些 API。即使是在 2009 年 ECMAScript 5 发布之后，仍然用了数年这些新规范才得到了浏览器的广泛支持，可是大部分开发者还是写着 ECMAScript 3 风格的代码，并不觉得有必要去了解这些规范。
+### Block Code
+If you indent at least four spaces or one tab, I'll display a code block.
 
-> 译者注：[ECMAScript 第四版草案](https://en.wikipedia.org/wiki/ECMAScript#4th_Edition_.28abandoned.29)由于太过激进而被抛弃，Adobe 的 [ActionScript 3.0](https://en.wikipedia.org/wiki/ActionScript) 是 ECMAScript edition 4 的唯一实现（ Flash 差点就统一 Web 了）
+	print('This is a code block')
+	print('The block must be preceded by a blank line')
+	print('Then indent at least 4 spaces or 1 tab')
+		print('Nesting does nothing. Your code is displayed Literally')
 
-到了 2012 年，事情突然开始有了转变。大家开始推动停止对旧版本 IE 浏览器的支持，用 ECMAScript 5 (ES5) 风格来编写代码也变得更加可行。与此同时，一个新的 ECMAScript 规范也开始启动。到了这时，大家开始逐渐习惯以对 ECMAScript 规范的版本支持程度来形容各种 JavaScript 实现。在正式被指名为 ECMAScript 第 6 版 (ES6) 之前，这个新的标准原本被称为 ES.Harmony（和谐）。2015 年，负责制定 ECMAScript 规范草案的委员会 TC39 决定将定义新标准的制度改为一年一次，这意味着每个新特性一旦被批准就可以添加，而不像以往一样，规范只有在整个草案完成，所有特性都没问题后才能被定稿。因此，ECMAScript 第 6 版在六月份公布之前，又被重命名为了 ECMAScript 2015（ES2015）
+I also know how to do something called [Fenced Code Blocks](#fenced-code-block) which I will tell you about later.
 
-目前，仍然有很多新的 JavaScript 特性或语法正在提议中，包括 [decorators（装饰者）](https://github.com/wycats/javascript-decorators)，[async-await（async-await 异步编程模型）](https://github.com/lukehoban/ecmascript-asyncawait) 和 [static class properties（静态类属性）](https://github.com/jeffmo/es-class-properties)。它们通常被称为 ES7，ES2016 或者 ES.Next 的特性，不过实际上它们只能被称作提案或者说可能性，毕竟 ES2016 的规范还没有完成，有可能全部都会引入，也有可能一个都没有。TC39 把一个提案分为 4 个阶段，你可以在 [Babel 的官网](https://babeljs.io/docs/usage/experimental/) 上查看各个提案目前都在哪个阶段了。
+### Horizontal Rules
+If you type three asterisks `***` or three dashes `---` on a line, I'll display a horizontal rule:
 
-所以，我们该如何使用这一大堆术语呢？下面的列表或许能帮助到你：
-
-* **ECMAScript**：一个由 ECMA International 进行标准化，TC39 委员会进行监督的语言。通常用于指代标准本身。
-* **JavaScript**：ECMAScript 标准的各种实现的最常用称呼。这个术语并不局限于某个特定版本的 ECMAScript 规范，并且可能被用于任何不同程度的任意版本的 ECMAScript 的实现。
-* **ECMAScript 5 (ES5)**：ECMAScript 的第五版修订，于 2009 年完成标准化。这个规范在所有现代浏览器中都相当完全的实现了。
-* **ECMAScript 6 (ES6) / ECMAScript 2015 (ES2015)**：ECMAScript 的第六版修订，于 2015 年完成标准化。这个标准被部分实现于大部分现代浏览器。可以查阅[这张兼容性表](http://kangax.github.io/compat-table/es6/)来查看不同浏览器和工具的实现情况。
-* **ECMAScript 2016**：预计的第七版 ECMAScript 修订，计划于明年夏季发布。这份规范具体将包含哪些特性还没有最终确定
-* **ECMAScript Proposals**：被考虑加入未来版本 ECMAScript 标准的特性与语法提案，他们需要经历五个阶段：Strawman（稻草人），Proposal（提议），Draft（草案），Candidate（候选）以及 Finished （完成）。
-
-在这整个 Blog 中，我将把目前的 ECMAScript 版本称作 ES6（因为这是大部分开发者最习以为常的），把明年的规范称作 ES2016（因为，与 ES6/ES2015 不同，这个名字将在整个标准化过程中沿用）并且将那些还没有成为 ECMAScript 定稿或草案的未来语言概念称为 ECMAScript 提案或者 JavaScript 提案。我将尽我所能在任何可能引起困惑的场合沿用这篇文章。
-
-#### 一些资源
+***
 
 
+## <a name="markdown-pane"></a>The Markdown Preference Pane
+This is where I keep all preferences related to how I parse markdown into html.  
+![Markdown preferences pane](http://d.pr/i/RQEi+)
 
-* TC39 的 [Github 仓库](https://github.com/tc39/ecma262)上可以看到所有目前公开的提案
-* 如果你还不熟悉 ES6，Babel 有一个[很不错的特性概览](https://babeljs.io/docs/learn-es2015/)
-* 如果你希望深入 ES6，这里有两本很不错的书： Axel Rauschmayer 的 [Exploring ES6](http://exploringjs.com/)和 Nicholas Zakas 的 [Understanding ECMAScript 6](https://leanpub.com/understandinges6)。Axel 的博客 [2ality](http://www.2ality.com/) 也是很不错的 ES6 资源
+### Document Formatting
+The ***Smartypants*** extension automatically transforms straight quotes (`"` and `'`) in your text into typographer’s quotes (`“`, `”`, `‘`, and `’`) according to the context. Very useful if you’re a typography freak like I am. Quote and Smartypants are syntactically incompatible. If both are enabled, Quote takes precedence.
 
-<img class="shadow" width="320" src="/img/in-post/post-js-version/keep-calm-and-learn-javascript.png" />
-<small class="img-hint">来学 JavaScript 吧！</small>
 
-#### 著作权声明
+### Block Formatting
 
-本文译自 [ES5, ES6, ES2016, ES.Next: What's going on with JavaScript versioning?](http://benmccormick.org/2015/09/14/es5-es6-es2016-es-next-whats-going-on-with-javascript-versioning/)   
-译者 [黄玄](http://weibo.com/huxpro)，首次发布于 [Hux Blog](http://huangxuan.me)，转载请保留以上链接
+#### Table
+
+This is a table:
+
+First Header  | Second Header
+------------- | -------------
+Content Cell  | Content Cell
+Content Cell  | Content Cell
+
+You can align cell contents with syntax like this:
+
+| Left Aligned  | Center Aligned  | Right Aligned |
+|:------------- |:---------------:| -------------:|
+| col 3 is      | some wordy text |         $1600 |
+| col 2 is      | centered        |           $12 |
+| zebra stripes | are neat        |            $1 |
+
+The left- and right-most pipes (`|`) are only aesthetic, and can be omitted. The spaces don’t matter, either. Alignment depends solely on `:` marks.
+
+#### <a name="fenced-code-block">Fenced Code Block</a>
+
+This is a fenced code block:
+
+```
+print('Hello world!')
+```
+
+You can also use waves (`~`) instead of back ticks (`` ` ``):
+
+~~~
+print('Hello world!')
+~~~
+
+
+You can add an optional language ID at the end of the first line. The language ID will only be used to highlight the code inside if you tick the ***Enable highlighting in code blocks*** option. This is what happens if you enable it:
+
+![Syntax highlighting example](http://d.pr/i/9HM6+)
+
+I support many popular languages as well as some generic syntax descriptions that can be used if your language of choice is not supported. See [relevant sections on the official site](http://macdown.uranusjr.com/features/) for a full list of supported syntaxes.
+
+
+### Inline Formatting
+
+The following is a list of optional inline markups supported:
+
+Option name         | Markup           | Result if enabled     |
+--------------------|------------------|-----------------------|
+Intra-word emphasis | So A\*maz\*ing   | So A<em>maz</em>ing   |
+Strikethrough       | \~~Much wow\~~   | <del>Much wow</del>   |
+Underline [^under]  | \_So doge\_      | <u>So doge</u>        |
+Quote [^quote]      | \"Such editor\"  | <q>Such editor</q>    |
+Highlight           | \==So good\==    | <mark>So good</mark>  |
+Superscript         | hoge\^(fuga)     | hoge<sup>fuga</sup>   |
+Autolink            | http://t.co      | <http://t.co>         |
+Footnotes           | [\^4] and [\^4]: | [^4] and footnote 4   |
+
+[^4]: You don't have to use a number. Arbitrary things like `[^footy note4]` and `[^footy note4]:` will also work. But they will *render* as numbered footnotes. Also, no need to keep your footnotes in order, I will sort out the order for you so they appear in the same order they were referenced in the text body. You can even keep some footnotes near where you referenced them, and collect others at the bottom of the file in the traditional place for footnotes. 
+
+
+
+
+## <a name="rendering-pane"></a>The Rendering Preference Pane
+This is where I keep preferences relating to how I render and style the parsed markdown in the preview window.  
+![Rendering preferences pane](http://d.pr/i/rT4d+)
+
+### CSS
+You can choose different css files for me to use to render your html. You can even customize or add your own custom css files.
+
+### Syntax Highlighting
+You have already seen how I can syntax highlight your fenced code blocks. See the [Fenced Code Block](#fenced-code-block) section if you haven’t! You can also choose different themes for syntax highlighting.
+
+### TeX-like Math Syntax
+I can also render TeX-like math syntaxes, if you allow me to.[^math] I can do inline math like this: \\( 1 + 1 \\) or this (in MathML): <math><mn>1</mn><mo>+</mo><mn>1</mn></math>, and block math:
+
+\\[
+    A^T_S = B
+\\]
+
+or (in MathML)
+
+<math display="block">
+    <msubsup><mi>A</mi> <mi>S</mi> <mi>T</mi></msubsup>
+    <mo>=</mo>
+    <mi>B</mi>
+</math>
+
+
+
+### Task List Syntax
+1. [x] I can render checkbox list syntax
+	* [x] I support nesting
+	* [x] I support ordered *and* unordered lists
+2. [ ] I don't support clicking checkboxes directly in the html window
+
+
+### Jekyll front-matter
+If you like, I can display Jekyll front-matter in a nice table. Just make sure you put the front-matter at the very beginning of the file, and fence it with `---`. For example:
+
+```
+---
+title: "Macdown is my friend"
+date: 2014-06-06 20:00:00
+---
+```
+
+### Render newline literally
+Normally I require you to put two spaces and a newline (aka return) at the end of a line in order to create a line break. If you like, I can render a newline any time you end a line with a newline. However, if you enable this, markdown that looks lovely when I render it might look pretty funky when you let some *other* program render it.
+
+
+
+
+
+## <a name="general-pane"></a>The General Preferences Pane
+
+This is where I keep preferences related to application behavior.  
+![General preferences pane](http://d.pr/i/rvwu+)
+
+The General Preferences Pane allows you to tell me how you want me to behave. For example, do you want me to make sure there is a document open when I launch? You can also tell me if I should constantly update the preview window as you type, or wait for you to hit `command-R` instead. Maybe you prefer your editor window on the right? Or to see the word-count as you type. This is also the place to tell me if you are interested in pre-releases of me, or just want to stick to better-tested official releases.  
+
+## <a name="editor-pane"></a>The Editor Preference Pane
+This is where I keep preferences related to the behavior and styling of the editing window.  
+![Editor preferences pane](http://d.pr/i/6OL5+)
+
+
+### Styling
+
+My editor provides syntax highlighting. You can edit the base font and the coloring/sizing theme. I provided some default themes (courtesy of [Mou](http://mouapp.com)’s creator, Chen Luo) if you don’t know where to start.
+
+You can also edit, or even add new themes if you want to! Just click the ***Reveal*** button, and start moving things around. Remember to use the correct file extension (`.styles`), though. I’m picky about that.
+
+I offer auto-completion and other functions to ease your editing experience. If you don’t like it, however, you can turn them off.
+
+
+
+
+
+## Hack On
+
+That’s about it. Thanks for listening. I’ll be quiet from now on (unless there’s an update about the app—I’ll remind you for that!).
+
+Happy writing!
+
+
+[^emphasize]: If **Underlines** is turned on, `_this notation_` will render as underlined instead of emphasized 
+
+[^under]: If **Underline** is disabled `_this_` will be rendered as *emphasized* instead of being underlined.
+
+[^quote]: **Quote** replaces literal `"` characters with html `<q>` tags. **Quote** and **Smartypants** are syntactically incompatible. If both are enabled, **Quote** takes precedence. Note that **Quote** is different from *blockquote*, which is part of standard Markdown.
+
+[^math]: Internet connection required.
+
+
+
