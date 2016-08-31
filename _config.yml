@@ -6,7 +6,7 @@ email: ganchaojiang@icloud.com
 description: ""
 keyword: ""
 url: "http://chaojiang.me"              # your host, for absolute URL
-baseurl: "/rogergan.github.com"         # for example, '/blog' if your blog hosted on 'host/blog'
+baseurl: ""         # for example, '/blog' if your blog hosted on 'host/blog'
 
 
 
