@@ -6,3 +6,5 @@
 #*.sh
 .history
 Gemfile.lock
+.jekyll-metadata
+_site
