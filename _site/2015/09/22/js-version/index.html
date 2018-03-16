@@ -10,7 +10,7 @@
     <meta name="keyword"  content="">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
-    <title>Example Post - 超江</title>
+    <title>Example Post - 超江 | Blog</title>
 
     <link rel="canonical" href="http://chaojiang.me/2015/09/22/js-version/">
 
@@ -196,13 +196,12 @@
 <h3 id="line-breaks">Line Breaks</h3>
 <p>To force a line break, put two spaces and a newline (return) at the end of the line.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>These lines
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>These lines
 won't break
 
 These lines  
 will break
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="strong-and-emphasize">Strong and Emphasize</h3>
 
@@ -211,24 +210,22 @@ will break
 
 <h3 id="headers-like-this-one">Headers (like this one!)</h3>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>Header 1
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Header 1
 ========
 
 Header 2
 --------
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>or</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code># Header 1
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Header 1
 ## Header 2
 ### Header 3
 #### Header 4
 ##### Header 5
 ###### Header 6
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="links-and-email">Links and Email</h3>
 <h4 id="inline">Inline</h4>
@@ -279,7 +276,7 @@ on it’s own line elsewhere:<br />
 
 <p>Here is the code:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>* Lists must be preceded by a blank line (or block element)
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* Lists must be preceded by a blank line (or block element)
 * Unordered lists start each item with a `*`
 - `-` works too
 	* Indent a level to make a nested list
@@ -287,8 +284,7 @@ on it’s own line elsewhere:<br />
 		2. Start each item (number-period-space) like `1. `
 		42. It doesn't matter what number you use, I will render them sequentially
 		1. So you might want to start each line with `1.` and let me sort it out
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="block-quote">Block Quote</h3>
 
@@ -315,7 +311,7 @@ Looks kinda ugly though.</p>
 
 <p>Here is the code:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&gt; Angle brackets `&gt;` are used for block quotes.  
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; Angle brackets `&gt;` are used for block quotes.  
 Technically not every line needs to start with a `&gt;` as long as
 there are no empty lines between paragraphs.  
 &gt; Looks kinda ugly though.
@@ -327,25 +323,23 @@ there are no empty lines between paragraphs.
 &gt; * Lists
 &gt; * [Links][arbitrary_id]
 &gt; * Etc.
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="inline-code">Inline Code</h3>
 <p><code class="highlighter-rouge">Inline code</code> is indicated by surrounding it with backticks:<br />
 <code class="highlighter-rouge">`Inline code`</code></p>
 
-<p>If your <code class="highlighter-rouge">code has `backticks`</code> that need to be displayed, you can use double backticks:
+<p>If your <code class="highlighter-rouge">code has `backticks`</code> that need to be displayed, you can use double backticks:<br />
 <code class="highlighter-rouge">``Code with `backticks` ``</code>  (mind the spaces preceding the final set of backticks)</p>
 
 <h3 id="block-code">Block Code</h3>
 <p>If you indent at least four spaces or one tab, I’ll display a code block.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>print('This is a code block')
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print('This is a code block')
 print('The block must be preceded by a blank line')
 print('Then indent at least 4 spaces or 1 tab')
 	print('Nesting does nothing. Your code is displayed Literally')
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>I also know how to do something called <a href="#fenced-code-block">Fenced Code Blocks</a> which I will tell you about later.</p>
 
@@ -354,7 +348,7 @@ print('Then indent at least 4 spaces or 1 tab')
 
 <hr />
 
-<h2 id="a-namemarkdown-paneathe-markdown-preference-pane"><a name="markdown-pane"></a>The Markdown Preference Pane</h2>
+<h2 id="the-markdown-preference-pane"><a name="markdown-pane"></a>The Markdown Preference Pane</h2>
 <p>This is where I keep all preferences related to how I parse markdown into html.<br />
 <img src="http://d.pr/i/RQEi+" alt="Markdown preferences pane" /></p>
 
@@ -417,19 +411,17 @@ print('Then indent at least 4 spaces or 1 tab')
 
 <p>The left- and right-most pipes (<code class="highlighter-rouge">|</code>) are only aesthetic, and can be omitted. The spaces don’t matter, either. Alignment depends solely on <code class="highlighter-rouge">:</code> marks.</p>
 
-<h4 id="a-namefenced-code-blockfenced-code-blocka"><a name="fenced-code-block">Fenced Code Block</a></h4>
+<h4 id="fenced-code-block"><a name="fenced-code-block">Fenced Code Block</a></h4>
 
 <p>This is a fenced code block:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>print('Hello world!')
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print('Hello world!')
+</code></pre></div></div>
 
 <p>You can also use waves (<code class="highlighter-rouge">~</code>) instead of back ticks (<code class="highlighter-rouge">`</code>):</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>print('Hello world!')
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print('Hello world!')
+</code></pre></div></div>
 
 <p>You can add an optional language ID at the end of the first line. The language ID will only be used to highlight the code inside if you tick the <strong><em>Enable highlighting in code blocks</em></strong> option. This is what happens if you enable it:</p>
 
@@ -493,7 +485,7 @@ print('Then indent at least 4 spaces or 1 tab')
   </tbody>
 </table>
 
-<h2 id="a-namerendering-paneathe-rendering-preference-pane"><a name="rendering-pane"></a>The Rendering Preference Pane</h2>
+<h2 id="the-rendering-preference-pane"><a name="rendering-pane"></a>The Rendering Preference Pane</h2>
 <p>This is where I keep preferences relating to how I render and style the parsed markdown in the preview window.<br />
 <img src="http://d.pr/i/rT4d+" alt="Rendering preferences pane" /></p>
 
@@ -519,37 +511,36 @@ print('Then indent at least 4 spaces or 1 tab')
 </math>
 
 <h3 id="task-list-syntax">Task List Syntax</h3>
-<ol>
-  <li>[x] I can render checkbox list syntax
-    <ul>
-      <li>[x] I support nesting</li>
-      <li>[x] I support ordered <em>and</em> unordered lists</li>
+<ol class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />I can render checkbox list syntax
+    <ul class="task-list">
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />I support nesting</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />I support ordered <em>and</em> unordered lists</li>
     </ul>
   </li>
-  <li>[ ] I don’t support clicking checkboxes directly in the html window</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />I don’t support clicking checkboxes directly in the html window</li>
 </ol>
 
 <h3 id="jekyll-front-matter">Jekyll front-matter</h3>
 <p>If you like, I can display Jekyll front-matter in a nice table. Just make sure you put the front-matter at the very beginning of the file, and fence it with <code class="highlighter-rouge">---</code>. For example:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>---
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
 title: "Macdown is my friend"
 date: 2014-06-06 20:00:00
 ---
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="render-newline-literally">Render newline literally</h3>
 <p>Normally I require you to put two spaces and a newline (aka return) at the end of a line in order to create a line break. If you like, I can render a newline any time you end a line with a newline. However, if you enable this, markdown that looks lovely when I render it might look pretty funky when you let some <em>other</em> program render it.</p>
 
-<h2 id="a-namegeneral-paneathe-general-preferences-pane"><a name="general-pane"></a>The General Preferences Pane</h2>
+<h2 id="the-general-preferences-pane"><a name="general-pane"></a>The General Preferences Pane</h2>
 
 <p>This is where I keep preferences related to application behavior.<br />
 <img src="http://d.pr/i/rvwu+" alt="General preferences pane" /></p>
 
 <p>The General Preferences Pane allows you to tell me how you want me to behave. For example, do you want me to make sure there is a document open when I launch? You can also tell me if I should constantly update the preview window as you type, or wait for you to hit <code class="highlighter-rouge">command-R</code> instead. Maybe you prefer your editor window on the right? Or to see the word-count as you type. This is also the place to tell me if you are interested in pre-releases of me, or just want to stick to better-tested official releases.</p>
 
-<h2 id="a-nameeditor-paneathe-editor-preference-pane"><a name="editor-pane"></a>The Editor Preference Pane</h2>
+<h2 id="the-editor-preference-pane"><a name="editor-pane"></a>The Editor Preference Pane</h2>
 <p>This is where I keep preferences related to the behavior and styling of the editing window.<br />
 <img src="http://d.pr/i/6OL5+" alt="Editor preferences pane" /></p>
 
@@ -570,19 +561,19 @@ date: 2014-06-06 20:00:00
 <div class="footnotes">
   <ol>
     <li id="fn:emphasize">
-      <p>If <strong>Underlines</strong> is turned on, <code class="highlighter-rouge">_this notation_</code> will render as underlined instead of emphasized <a href="#fnref:emphasize" class="reversefootnote">&#8617;</a></p>
+      <p>If <strong>Underlines</strong> is turned on, <code class="highlighter-rouge">_this notation_</code> will render as underlined instead of emphasized <a href="#fnref:emphasize" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:under">
-      <p>If <strong>Underline</strong> is disabled <code class="highlighter-rouge">_this_</code> will be rendered as <em>emphasized</em> instead of being underlined. <a href="#fnref:under" class="reversefootnote">&#8617;</a></p>
+      <p>If <strong>Underline</strong> is disabled <code class="highlighter-rouge">_this_</code> will be rendered as <em>emphasized</em> instead of being underlined. <a href="#fnref:under" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:quote">
-      <p><strong>Quote</strong> replaces literal <code class="highlighter-rouge">"</code> characters with html <code class="highlighter-rouge">&lt;q&gt;</code> tags. <strong>Quote</strong> and <strong>Smartypants</strong> are syntactically incompatible. If both are enabled, <strong>Quote</strong> takes precedence. Note that <strong>Quote</strong> is different from <em>blockquote</em>, which is part of standard Markdown. <a href="#fnref:quote" class="reversefootnote">&#8617;</a></p>
+      <p><strong>Quote</strong> replaces literal <code class="highlighter-rouge">"</code> characters with html <code class="highlighter-rouge">&lt;q&gt;</code> tags. <strong>Quote</strong> and <strong>Smartypants</strong> are syntactically incompatible. If both are enabled, <strong>Quote</strong> takes precedence. Note that <strong>Quote</strong> is different from <em>blockquote</em>, which is part of standard Markdown. <a href="#fnref:quote" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:4">
-      <p>You don’t have to use a number. Arbitrary things like <code class="highlighter-rouge">[^footy note4]</code> and <code class="highlighter-rouge">[^footy note4]:</code> will also work. But they will <em>render</em> as numbered footnotes. Also, no need to keep your footnotes in order, I will sort out the order for you so they appear in the same order they were referenced in the text body. You can even keep some footnotes near where you referenced them, and collect others at the bottom of the file in the traditional place for footnotes. <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
+      <p>You don’t have to use a number. Arbitrary things like <code class="highlighter-rouge">[^footy note4]</code> and <code class="highlighter-rouge">[^footy note4]:</code> will also work. But they will <em>render</em> as numbered footnotes. Also, no need to keep your footnotes in order, I will sort out the order for you so they appear in the same order they were referenced in the text body. You can even keep some footnotes near where you referenced them, and collect others at the bottom of the file in the traditional place for footnotes. <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:math">
-      <p>Internet connection required. <a href="#fnref:math" class="reversefootnote">&#8617;</a></p>
+      <p>Internet connection required. <a href="#fnref:math" class="reversefootnote">&#8617;</a></p>
     </li>
   </ol>
 </div>
@@ -603,7 +594,7 @@ date: 2014-06-06 20:00:00
 
 
 
-Hello there! I’m MacDown, the open source Markdown editor for OS X... | 超江 " >
+Hello there! I’m MacDown, the open source Markdown editor for OS X... | 超江 | Blog " >
                     <div class="ds-share-inline">
                       <ul  class="ds-share-icons-16">
                         <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>
@@ -618,10 +609,7 @@ Hello there! I’m MacDown, the open source Markdown editor for OS X... | 超江
                 </div>
                 <!-- 多说 Share end-->
                 
-                <!-- UY BEGIN -->
-                <div id="uyan_frame"></div>
-                <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2159316"></script>
-                <!-- UY END -->
+
 
                 <ul class="pager">
                     
@@ -685,7 +673,7 @@ Hello there! I’m MacDown, the open source Markdown editor for OS X... | 超江
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
     // dynamic User by Hux
-    var _user = '6324919747938878000';
+    var _user = 'rogergan';
 
     // duoshuo comment query.
     var duoshuoQuery = {short_name: _user };
@@ -775,15 +763,6 @@ Hello there! I’m MacDown, the open source Markdown editor for OS X... | 超江
 
 
                     
-                    <li>
-                        <a target="_blank" href="https://www.facebook.com/无">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
                     
                     <li>
                         <a target="_blank" href="https://github.com/RogerGan">
@@ -796,7 +775,7 @@ Hello there! I’m MacDown, the open source Markdown editor for OS X... | 超江
                     
                 </ul>
                 <p class="copyright text-muted">
-                    Copyright &copy; 超江同学写字的地方 2016
+                    Copyright &copy; 超江同学写字的地方 2018
                     <br>
                 </p>
             </div>
@@ -870,28 +849,13 @@ Hello there! I’m MacDown, the open source Markdown editor for OS X... | 超江
 
 <!-- Google Analytics -->
 
-<script>
-    // dynamic User by Hux
-    var _gaId = 'UA-49627206-1';
-    var _gaDomain = 'huangxuan.me';
-
-    // Originial
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', _gaId, _gaDomain);
-    ga('send', 'pageview');
-</script>
-
 
 
 <!-- Baidu Tongji -->
 
 <script>
     // dynamic User by Hux
-    var _baId = '4cc1f2d8f3067386cc5cdb626a202900';
+    var _baId = 'Analytics';
 
     // Originial
     var _hmt = _hmt || [];
