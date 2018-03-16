@@ -1,4 +1,6 @@
-# Hux blog 模板
+写字...
+
+<!-- # Hux blog 模板
 
 ### [我的博客在这里](http://huxpro.github.io)
 
@@ -231,4 +233,4 @@ There are a number of tasks it performs like minification of the JavaScript, com
 3. 感谢 Jekyll、Github Pages 和 Bootstrap!
 
 
-
+ -->
