@@ -16,7 +16,7 @@ weibo_username:     ganchaojiang
 zhihu_username:     da-kun-53
 github_username:    RogerGan
 #twitter_username:  huxpro
-facebook_username:  无
+# facebook_username:  无
 
 
 
@@ -61,8 +61,8 @@ duoshuo_share: true                     # set to false if you want to use Commen
 # Baidu Analytics
 ba_track_id: Analytics
 # Google Analytics
-ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
-ga_domain: huangxuan.me
+# ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
+# ga_domain: huangxuan.me
 
 
 
