@@ -64,14 +64,14 @@ ba_track_id: Analytics
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "不务正业的写代码"
-sidebar-avatar: /img/avatar-hux.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/roger.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
 # Featured Tags
 featured-tags: true                     # whether or not using Feature-Tags
-featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
-
+featured-condition-size: 0              # A tag will be featured if the size of it is more than this condition value
+tags: ['开发技术', '读书笔记', '生活感悟', '测试技术']
 
 
 # Friends
