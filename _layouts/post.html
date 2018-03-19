@@ -1,6 +1,4 @@
----
-layout: default
----
+--- layout: default ---
 
 <!-- Image to hack wechat -->
 <!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
@@ -8,11 +6,11 @@ layout: default
 
 <!-- Post Header -->
 <style type="text/css">
-    header.intro-header{
+    header.intro-header {
         background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')
     }
 </style>
-<header class="intro-header" >
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -23,13 +21,12 @@ layout: default
                         {% endfor %}
                     </div>
                     <h1>{{ page.title }}</h1>
-                    {% comment %}
-                        always create a h2 for keeping the margin , Hux
-                    {% endcomment %}
-                    {% comment %} if page.subtitle {% endcomment %}
+                    {% comment %} always create a h2 for keeping the margin , Hux {% endcomment %} {% comment %} if page.subtitle {% endcomment
+                    %}
                     <h2 class="subheading">{{ page.subtitle }}</h2>
                     {% comment %} endif {% endcomment %}
-                    <span class="meta">Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} on {{ page.date | date: "%B %-d, %Y" }}</span>
+                    <span class="meta">Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} on {{ page.date
+                        | date: "%B %-d, %Y" }}</span>
                 </div>
             </div>
         </div>
@@ -41,56 +38,56 @@ layout: default
     <div class="container">
         <div class="row">
 
-    <!-- Post Container -->
+            <!-- Post Container -->
             <div class="
                 col-lg-8 col-lg-offset-2
                 col-md-10 col-md-offset-1
                 post-container">
 
-				{{ content }}
+                {{ content }}
                 <hr>
 
-    <!-- 百度分享 start -->
-<div class="bdsharebuttonbox">
-    <a href="#" class="bds_more" data-cmd="more">分享到：</a>
-    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">微信</a>
-    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a>
-    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a>
-    <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博">腾讯微博</a>
-    <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网">人人网</a>
-    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网">豆瓣网</a>
-</div>
-<script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "震惊！居然....", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "1", "bdSize": "16" }, "share": { "bdSize": 16 }, "image": { "viewList": ["weixin", "qzone", "tsina", "tqq", "renren", "douban"], "viewText": "分享到：", "viewSize": "16" }, "selectShare": { "bdContainerClass": null, "bdSelectMiniList": ["weixin", "qzone", "tsina", "tqq", "renren", "douban"] } }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
+                <!-- 百度分享 start -->
+                <div class="bdsharebuttonbox">
+                    <a href="#" class="bds_more" data-cmd="more">分享到：</a>
+                    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">微信</a>
+                    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a>
+                    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a>
+                    <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博">腾讯微博</a>
+                    <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网">人人网</a>
+                    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网">豆瓣网</a>
+                </div>
+                <script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "震惊！居然...快删赶紧看...", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "1", "bdSize": "16" }, "share": { "bdSize": 16 }, "image": { "viewList": ["weixin", "qzone", "tsina", "tqq", "renren", "douban"], "viewText": "分享到：", "viewSize": "16" }, "selectShare": { "bdContainerClass": null, "bdSelectMiniList": ["weixin", "qzone", "tsina", "tqq", "renren", "douban"] } }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
 
-    <!-- Gitalk 评论 start  -->
+                <!-- Gitalk 评论 start  -->
 
-    <!-- Link Gitalk 的支持文件  -->
-    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-    <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
-    <div id="gitalk-container"></div>
-    <script type="text/javascript">
-        var gitalk = new Gitalk({
+                <!-- Link Gitalk 的支持文件  -->
+                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+                <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+                <div id="gitalk-container"></div>
+                <script type="text/javascript">
+                    var gitalk = new Gitalk({
 
-            // gitalk的主要参数
-            clientID: `baa22c424426888e9882`,
-            clientSecret: `95a33c16f530e05e55182e79b2915a7ace99aa7e`,
-            repo: `rogergan.github.com`,
-            owner: 'RogerGan',
-            admin: ['RogerGan'],
-            id: '',
+                        // gitalk的主要参数
+                        clientID: `baa22c424426888e9882`,
+                        clientSecret: `95a33c16f530e05e55182e79b2915a7ace99aa7e`,
+                        repo: `rogergan.github.com`,
+                        owner: 'RogerGan',
+                        admin: ['RogerGan'],
+                        id: '',
 
-        });
-        gitalk.render('gitalk-container');
-    </script>
-    <!-- Gitalk end -->
+                    });
+                    gitalk.render('gitalk-container');
+                </script>
+                <!-- Gitalk end -->
 
                 <ul class="pager">
                     {% if page.previous.url %}
                     <li class="previous">
-                        <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">&larr; Previous Post</a>
+                        <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top"
+                            title="{{page.previous.title}}">&larr; Previous Post</a>
                     </li>
-                    {% endif %}
-                    {% if page.next.url %}
+                    {% endif %} {% if page.next.url %}
                     <li class="next">
                         <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">Next Post &rarr;</a>
                     </li>
@@ -101,16 +98,11 @@ layout: default
                 {% if site.duoshuo_username %}
                 <!-- 多说评论框 start -->
                 <div class="comment">
-                    <div class="ds-thread"
-                        data-thread-key="{{page.id}}"
-                        data-title="{{page.title}}"
-                        data-url="{{site.url}}{{site.baseurl}}{{page.url}}" >
+                    <div class="ds-thread" data-thread-key="{{page.id}}" data-title="{{page.title}}" data-url="{{site.url}}{{site.baseurl}}{{page.url}}">
                     </div>
                 </div>
                 <!-- 多说评论框 end -->
-                {% endif %}
-
-                {% if site.disqus_username %}
+                {% endif %} {% if site.disqus_username %}
                 <!-- disqus 评论框 start -->
                 <div class="comment">
                     <div id="disqus_thread" class="disqus-thread"></div>
@@ -120,7 +112,7 @@ layout: default
 
             </div>
 
-    <!-- Sidebar Container -->
+            <!-- Sidebar Container -->
             <div class="
                 col-lg-8 col-lg-offset-2
                 col-md-10 col-md-offset-1
@@ -130,16 +122,16 @@ layout: default
                 {% if site.featured-tags %}
                 <section>
                     <hr class="hidden-sm hidden-xs">
-                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <h5>
+                        <a href="/tags/">FEATURED TAGS</a>
+                    </h5>
                     <div class="tags">
-        				{% for tag in site.tags %}
-                            {% if tag[1].size >  site.featured-condition-size %}
-                				<a href="{{ site.baseurl }}/tags/#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">
-                                    {{ tag[0] }}
-                                </a>
-                            {% endif %}
-        				{% endfor %}
-        			</div>
+                        {% for tag in site.tags %} {% if tag[1].size > site.featured-condition-size %}
+                        <a href="{{ site.baseurl }}/tags/#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">
+                            {{ tag[0] }}
+                        </a>
+                        {% endif %} {% endfor %}
+                    </div>
                 </section>
                 {% endif %}
 
@@ -149,7 +141,9 @@ layout: default
                 <h5>FRIENDS</h5>
                 <ul class="list-inline">
                     {% for friend in site.friends %}
-                        <li><a href="{{friend.href}}">{{friend.title}}</a></li>
+                    <li>
+                        <a href="{{friend.href}}">{{friend.title}}</a>
+                    </li>
                     {% endfor %}
                 </ul>
                 {% endif %}
