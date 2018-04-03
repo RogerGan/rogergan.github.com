@@ -14,7 +14,10 @@ tags:
 
 周末监控一直告警，后面自动恢复。
 
-``` 一般处理就是网络抖动了，但是咱们要打破砂锅问到底。```
+```
+一般处理就是网络抖动了，但是咱们要打破砂锅问到底。
+
+```
 
 dig一下，发现下载域下有多个CDNip。
 
@@ -23,6 +26,7 @@ dig一下，发现下载域下有多个CDNip。
 ```
 r = requests.head(url, timeout=30, headers=headers, stream=True, verify=False)
 ip_port=r.raw._connection.sock.getpeername()
+
 ```
 
 
