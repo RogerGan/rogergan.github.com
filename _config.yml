@@ -1,5 +1,5 @@
 # Site settings
-title: 笔记本
+title: 超级江笔记本
 SEOTitle: 写字 | Blog | 超江 
 header-img: img/home-bg.jpg
 email: ganchaojiang@icloud.com
@@ -63,7 +63,7 @@ ba_track_id: Analytics
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "不务正业的写代码"
+sidebar-about-description: "你说我将要去何方，我指向大海的方向～"
 sidebar-avatar: /img/roger.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
